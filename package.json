@@ -1,13 +1,13 @@
 {
   "scripts": {
-    "dev": "npm run init-dist & webpack-dev-server",
-    "build": "npm run init-dist & NODE_ENV=production webpack",
-    "watch": "npm run init-dist & webpack -w",
+    "dev": "npm run init-dist && echo '\\033[32minitial build...' && webpack --display=minimal && webpack-dev-server",
+    "build": "npm run init-dist && NODE_ENV=production webpack",
+    "watch": "npm run init-dist && webpack -w",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
     "lint": "eslint --quiet \"src/**/*.{ts,tsx}\"",
     "lint:fix": "eslint --fix --quiet \"src/**/*.{ts,tsx}\"",
-    "init-dist": "rm -rf dist/* & cp -r public/ dist"
+    "init-dist": "rm -rf dist/* && cp -r public/ dist"
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
