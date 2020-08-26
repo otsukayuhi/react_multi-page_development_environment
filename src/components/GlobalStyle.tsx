@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Global, css } from '@emotion/core';
 import * as ress from 'ress/dist/ress.min.css';
 import { color } from 'const/styles';
