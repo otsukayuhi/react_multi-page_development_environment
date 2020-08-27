@@ -17,7 +17,7 @@ const App: React.FC<Props> = ({ className }) => (
         <h1 className="title">トップページ</h1>
         <p className="lead">トップページのサンプル</p>
         <p>
-          <a href="/about.html">アバウトページへ</a>
+          <a href="/about/">アバウトページへ</a>
         </p>
       </div>
     </BaseLayoutStyle>
