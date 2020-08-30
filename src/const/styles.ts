@@ -19,6 +19,8 @@ export const breakPoints = {
   xl: 1200,
 } as const;
 
+export type BreakPoint = typeof breakPoints;
+
 export const color = {
   white: '#fff',
   black: '#333',
