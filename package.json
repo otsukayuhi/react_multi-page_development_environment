@@ -50,14 +50,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run type-check && npm run test"
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "tsc --noEmit",
-      "prettier --write src/**/*.{ts,tsx}",
-      "eslint --fix src/**/*.{ts,tsx}"
+    "*.{ts,tsx,js}": [
+      "eslint --fix src/**/*.{ts,tsx,js}",
+      "prettier --write src/**/*.{ts,tsx,js}"
     ]
   },
   "private": true
