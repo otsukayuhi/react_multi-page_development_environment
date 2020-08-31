@@ -1,10 +1,12 @@
-const config = require('./project.config');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const config = require('./project.config');
 
 const entries = Object.fromEntries(
   config.pages.map((entry) => [entry.name, entry.entryPath]),
 );
+
+const date = new Date();
 
 const htmls = config.pages.map(
   (page) =>
@@ -18,6 +20,7 @@ const htmls = config.pages.map(
         ogType: page.ogType,
         origin: config.origin,
         pathname: `/${page.filename.replace(/\index\.html$/, '')}`,
+        update: `${date.getFullYear()}${date.getMonth() + 1}${date.getDate()}`,
       },
     }),
 );
