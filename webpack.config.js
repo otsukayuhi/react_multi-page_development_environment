@@ -7,6 +7,9 @@ const entries = Object.fromEntries(
 );
 
 const date = new Date();
+const update = config.ogImageUpdateParam
+  ? `?update=${date.getFullYear()}${date.getMonth() + 1}${date.getDate()}`
+  : null;
 
 const htmls = config.pages.map(
   (page) =>
@@ -20,7 +23,7 @@ const htmls = config.pages.map(
         ogType: page.ogType,
         origin: config.origin,
         pathname: `/${page.filename.replace(/\index\.html$/, '')}`,
-        update: `${date.getFullYear()}${date.getMonth() + 1}${date.getDate()}`,
+        update,
       },
     }),
 );

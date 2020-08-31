@@ -5,6 +5,11 @@ module.exports = {
   jsDir: 'js',
   /** オリジン */
   origin: 'https://example.com',
+  /**
+   * og:image に ?update のクエリパラメーターを付与するか？
+   * @note true の場合、ビルドするたびに new Date() から取得した値を付与します
+   */
+  ogImageUpdateParam: false,
   /** 各ページの設定 */
   pages: [
     {
