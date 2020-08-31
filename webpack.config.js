@@ -36,7 +36,7 @@ module.exports = () => {
     entry: entries,
     output: {
       path: `${__dirname}/${config.outDir}`,
-      filename: `${config.jsDir}/[name].js`,
+      filename: `${config.jsDir}/[name].[hash].js`,
     },
     module: {
       rules: [
